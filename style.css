@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -35,4 +36,37 @@ footer {
     margin-top: 20px;
     font-size: 0.9em;
     color: #666;
+    background-color: #e0e0e0;
+    padding: 10px 0;
+}
+
+/* ✅ 반응형 디자인: 화면 너비 768px 이하일 때 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;  /* 제목 크기 줄이기 */
+    }
+
+    p {
+        font-size: 1em;  /* 본문 글자 크기 조정 */
+    }
+
+    nav a {
+        display: block;  /* 메뉴를 수직으로 배치 */
+        margin: 10px 0;
+    }
+}
+
+/* ✅ 아주 작은 화면 (480px 이하) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
 }
