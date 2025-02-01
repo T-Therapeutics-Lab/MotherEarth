@@ -46,7 +46,27 @@
 </head>
 <body>
     <h1>💻 Coding</h1>
+    
+    <!-- ✅ 다크 모드 토글 -->
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
 
+    <label for="sort">Sort by:</label>
+    <select id="sort" onchange="sortPosts(this.value)">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="title">Title (A-Z)</option>
+    </select>
+
+    <ul id="post-list"></ul>
+    <a href="../index.html">📚 Back to Study</a>
+
+    <!-- ✅ 다크 모드 스크립트 -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    
     <!-- ✅ 정렬 선택 메뉴 -->
     <label for="sort">Sort by:</label>
     <select id="sort" onchange="sortPosts(this.value)">
