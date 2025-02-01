@@ -1,99 +1,62 @@
-/* ✅ 기본 설정 */
+/* ✅ 기본 스타일 */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 20px;
+    padding: 0;
+    line-height: 1.6;
 }
 
+/* ✅ 제목 */
 h1 {
     text-align: center;
-    color: #007acc;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-/* ✅ 네비게이션 바 */
-nav a {
-    margin: 0 10px;
+/* ✅ 네비게이션 */
+nav a, a {
+    color: #000;
     text-decoration: none;
-    color: #007acc;
+    margin: 0 10px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #ff5722;
+nav a:hover, a:hover {
+    text-decoration: underline;
 }
 
-/* ✅ 글 카드 스타일 */
+/* ✅ 글 목록 (심플 리스트) */
 #post-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0;
     list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 #post-list li {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
-#post-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-#post-list a {
-    text-decoration: none;
-    color: #007acc;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-#post-list a:hover {
-    color: #ff5722;
+#post-list li:last-child {
+    border-bottom: none;
 }
 
 /* ✅ 정렬 드롭다운 */
 #sort {
-    padding: 8px 12px;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    cursor: pointer;
+    border-radius: 4px;
 }
 
-/* ✅ 푸터 스타일 */
+/* ✅ 푸터 */
 footer {
-    margin-top: 30px;
     text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
     color: #666;
-    font-size: 0.9em;
-}
-
-/* ✅ 다크 모드 스타일 */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode #post-list li {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-}
-
-body.dark-mode nav a,
-body.dark-mode #post-list a {
-    color: #90caf9;
-}
-
-body.dark-mode nav a:hover,
-body.dark-mode #post-list a:hover {
-    color: #ff8a65;
 }
