@@ -1,72 +1,99 @@
-/* 기본 스타일 */
+/* ✅ 기본 설정 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    text-align: center;
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
-    color: #1e90ff;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
+/* ✅ 네비게이션 바 */
 nav a {
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #0077cc;
+    color: #007acc;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ff4500;
-    transition: 0.3s;
+    color: #ff5722;
 }
 
+/* ✅ 글 카드 스타일 */
+#post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+#post-list li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#post-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#post-list a {
+    text-decoration: none;
+    color: #007acc;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#post-list a:hover {
+    color: #ff5722;
+}
+
+/* ✅ 정렬 드롭다운 */
+#sort {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* ✅ 푸터 스타일 */
 footer {
-    margin-top: 20px;
-    font-size: 0.9em;
+    margin-top: 30px;
+    text-align: center;
     color: #666;
-    background-color: #e0e0e0;
-    padding: 10px 0;
+    font-size: 0.9em;
 }
 
-/* ✅ 반응형 디자인: 화면 너비 768px 이하일 때 */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2em;  /* 제목 크기 줄이기 */
-    }
-
-    p {
-        font-size: 1em;  /* 본문 글자 크기 조정 */
-    }
-
-    nav a {
-        display: block;  /* 메뉴를 수직으로 배치 */
-        margin: 10px 0;
-    }
+/* ✅ 다크 모드 스타일 */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-/* ✅ 아주 작은 화면 (480px 이하) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em;
-    }
+body.dark-mode #post-list li {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
 
-    p {
-        font-size: 0.9em;
-    }
+body.dark-mode nav a,
+body.dark-mode #post-list a {
+    color: #90caf9;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode #post-list a:hover {
+    color: #ff8a65;
 }
