@@ -3,13 +3,61 @@
 <head>
     <title>💻 Coding - Study</title>
     <link rel="stylesheet" href="../../style.css">
+    <script>
+        // ✅ 글 데이터 (제목, 날짜, 링크)
+        const posts = [
+            { title: "Introduction to HTML", date: "2025-01-31", link: "post1.html" },
+            { title: "CSS Basics", date: "2025-01-30", link: "post2.html" },
+            { title: "JavaScript Fundamentals", date: "2025-01-29", link: "post3.html" }
+        ];
+
+        // ✅ 정렬 함수
+        function sortPosts(criteria) {
+            let sortedPosts = [...posts];
+
+            if (criteria === "newest") {
+                sortedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            } else if (criteria === "oldest") {
+                sortedPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+            } else if (criteria === "title") {
+                sortedPosts.sort((a, b) => a.title.localeCompare(b.title));
+            }
+
+            displayPosts(sortedPosts);
+        }
+
+        // ✅ 글 목록 표시
+        function displayPosts(postList) {
+            const postContainer = document.getElementById("post-list");
+            postContainer.innerHTML = ""; // 초기화
+
+            postList.forEach(post => {
+                const postItem = document.createElement("li");
+                postItem.innerHTML = `<a href="${post.link}">${post.title}</a> - ${post.date}`;
+                postContainer.appendChild(postItem);
+            });
+        }
+
+        // ✅ 페이지 로드 시 최신순으로 표시
+        window.onload = function() {
+            sortPosts("newest");
+        };
+    </script>
 </head>
 <body>
     <h1>💻 Coding</h1>
-    <ul>
-        <li><a href="post1.html">Introduction to HTML</a> - Jan 31, 2025</li>
-        <li><a href="post2.html">CSS Basics</a> - Jan 30, 2025</li>
-    </ul>
+
+    <!-- ✅ 정렬 선택 메뉴 -->
+    <label for="sort">Sort by:</label>
+    <select id="sort" onchange="sortPosts(this.value)">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        <option value="title">Title (A-Z)</option>
+    </select>
+
+    <!-- ✅ 글 목록 표시 -->
+    <ul id="post-list"></ul>
+
     <a href="../index.html">📚 Back to Study</a>
 </body>
 </html>
