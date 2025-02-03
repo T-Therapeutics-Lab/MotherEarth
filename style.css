@@ -4,13 +4,13 @@
     font-size: 25px;
     font-weight: bold;
     font-family: Tahoma;
-    text-align: center;
 }
 
 #main nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    text-align: center;
 }
 
 #main nav li {
