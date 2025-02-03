@@ -55,7 +55,7 @@ nav a:hover, a:hover {
 
 /* ✅ 푸터 */
 footer {
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
     font-size: 0.8em;
     color: #666;
