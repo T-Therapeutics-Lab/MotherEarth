@@ -1,3 +1,32 @@
+#main nav {
+    background-color: #9ad8de; /* 여기서 색상 변경 */
+    height: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+#main nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#main nav li {
+    display: inline;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+#main nav a {
+    text-decoration: none;
+    padding: 8px;
+    color: white; /* 글자 색은 흰색으로 유지 */
+    vertical-align: middle;
+}
+
+
 /* ✅ 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
