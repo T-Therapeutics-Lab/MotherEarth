@@ -1,3 +1,5 @@
+/* 메인 네비게이션 CSS */
+
 #mainnav {
     background-color: #148bec; /* 여기서 색상 변경 */
     height: 35px;
@@ -26,6 +28,7 @@
     vertical-align: middle;
 }
 
+/* 메인 네비게이션 CSS 종료 */
 
 /* ✅ 기본 스타일 */
 body {
