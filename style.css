@@ -1,4 +1,4 @@
-#main nav {
+#mainnav {
     background-color: #148bec; /* 여기서 색상 변경 */
     height: 35px;
     font-size: 25px;
@@ -6,20 +6,20 @@
     font-family: Tahoma;
 }
 
-#main nav ul {
+#mainnav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
     text-align: center;
 }
 
-#main nav li {
+#mainnav li {
     display: inline;
     padding: 15px;
     vertical-align: middle;
 }
 
-#main nav a {
+#mainnav a {
     text-decoration: none;
     padding: 8px;
     color: white; /* 글자 색은 흰색으로 유지 */
