@@ -1,41 +1,171 @@
-/* 네비게이션 바 스타일 */
-.navbar {
-  display: flex;               /* 가로 정렬 */
-  justify-content: space-between;  /* 양쪽 끝으로 정렬 */
-  align-items: center;         /* 수직 중앙 정렬 */
-  background-color: #262a33;   /* 백그라운드 색상 */
-  padding: 15px 30px;          /* 여백 설정 */
-  color: white;
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 로고 스타일 */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Container for centralizing content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #007BFF;
 }
 
-/* 네비게이션 링크 스타일 */
-.nav-links {
-  display: flex;               /* 링크를 가로로 배치 */
-  list-style: none;            /* 불릿 제거 */
-  gap: 20px;                   /* 링크 간 간격 */
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.nav-links a {
-  text-decoration: none;       /* 밑줄 제거 */
-  color: white;
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
   font-weight: 500;
-  transition: color 0.3s;      /* 호버 효과 */
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #4ecdc4;              /* 호버 시 색상 변경 */
+header nav ul li a:hover {
+  color: #007BFF;
 }
 
-/* ✅ 푸터 */
+/* Hero section styles */
+.hero {
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Posts Section */
+.posts {
+  padding: 40px 0;
+}
+
+.post {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.post p {
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
 footer {
-    text-align: left;
-    margin-top: 30px;
-    font-size: 0.8em;
-    color: #666;
+  background-color: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social li {
+  margin: 0 10px;
+}
+
+.social li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social li a:hover {
+  color: #007BFF;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  header nav ul li {
+    margin: 10px 0;
+  }
+  
+  .hero {
+    padding: 60px 0;
+  }
 }
