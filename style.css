@@ -28,12 +28,16 @@
     vertical-align: middle;
 }
 
+#mainnav a:hover, a:hover {
+    text-decoration: underline;
+}
+
 /* 메인 네비게이션 CSS 종료 */
 
 /* ✅ 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: #262a33
     color: #000;
     margin: 20px;
     padding: 0;
