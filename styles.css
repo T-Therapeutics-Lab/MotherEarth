@@ -1,5 +1,5 @@
 body {
   background-color: #262a33;  /* 부드러운 남청 배경 */
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif; /* Body 부분 모든 폰트 */
+  color: #FFFFFF; /* Body 부분 모든 폰트 */
 }
