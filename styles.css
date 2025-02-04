@@ -1,8 +1,15 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #F0F4F8;  /* 부드러운 블루그레이 톤 */
 }
 
 /* Container for centralizing content */
@@ -14,7 +21,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: #fff;
+  background-color: #E8EBF0;  /* 헤더에 눈에 편한 밝은 톤 */
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -76,7 +83,7 @@ header nav ul li a:hover {
 }
 
 .post {
-  background: #fff;
+  background: #F7F7F7;  /* 콘텐츠 배경색을 순수한 흰색 대신 아주 옅은 회색으로 변경 */
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -110,7 +117,7 @@ header nav ul li a:hover {
 
 /* Footer styles */
 footer {
-  background-color: #fff;
+  background-color: #E8EBF0;  /* 푸터에도 동일한 부드러운 톤 적용 */
   padding: 20px 0;
   border-top: 1px solid #ddd;
   text-align: center;
