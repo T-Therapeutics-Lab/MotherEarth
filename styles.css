@@ -10,11 +10,11 @@ body {
 /* 헤더 스타일 */
 #topheader {
   background-color: #262a33;
-  display: flex;                  /* 로고와 메뉴를 가로로 배치 */
-  justify-content: space-between; /* 로고 좌측, 메뉴 우측 정렬 */
-  align-items: center;            /* 수직 중앙 정렬 */
-  padding: 10px 20px;             /* 좌우 여백 추가 */
-  border-bottom: 1px solid #444;  /* 하단 구분선 */
+  display: flex;
+  justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
 }
 
 /* 로고 스타일 */
@@ -22,50 +22,75 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #FFFFFF;
-  text-decoration: none;          /* 밑줄 제거 */
-  transition: color 0.3s ease;    /* 호버 효과 */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: #4ecdc4;                 /* 로고 호버 시 색상 변경 */
+  color: #4ecdc4;
 }
 
-/* 네비게이션 메뉴 스타일 */
-#topheader ul {
+/* 네비게이션 메뉴 */
+#nav-menu ul {
+  list-style: none;
+  display: flex;               /* 가로로 나열 */
+  gap: 20px;
   padding: 0;
   margin: 0;
-  list-style-type: none;
-  display: flex;                  /* 메뉴를 가로로 나열 */
-  gap: 20px;                      /* 메뉴 간격 */
 }
 
-#topheader li {
+#nav-menu li {
   display: inline;
-  padding: 0;
 }
 
-/* 메뉴 링크 스타일 */
-#topheader a {
+#nav-menu a {
   color: #FFFFFF;
-  text-decoration: none;          /* 밑줄 제거 */
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-/* 메뉴 호버 효과 */
-#topheader a:hover {
-  color: #4ecdc4;                 /* 메뉴 호버 시 색상 변경 */
+#nav-menu a:hover {
+  color: #4ecdc4;
+}
+
+/* 햄버거 아이콘 */
+.menu-toggle {
+  display: none;               /* 기본적으로 숨김 */
+  font-size: 28px;
+  cursor: pointer;
+  color: #FFFFFF;
 }
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
-  #topheader {
-    flex-direction: column;       /* 작은 화면에서는 세로 배치 */
-    align-items: center;
+  .menu-toggle {
+    display: block;            /* 작은 화면에서는 햄버거 메뉴 표시 */
   }
 
-  #topheader ul {
-    flex-direction: column;       /* 메뉴도 세로로 나열 */
+  #nav-menu {
+    display: none;             /* 초기에는 메뉴 숨김 */
+    flex-direction: column;
+    background-color: #262a33;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+  }
+
+  #nav-menu.active {
+    display: flex;             /* 햄버거 클릭 시 메뉴 표시 */
+  }
+
+  #nav-menu ul {
+    flex-direction: column;    /* 세로로 정렬 */
     gap: 10px;
+  }
+
+  #nav-menu a {
+    padding: 10px;
+    text-align: center;
   }
 }
