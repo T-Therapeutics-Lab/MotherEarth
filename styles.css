@@ -1,11 +1,71 @@
+/* 기본 스타일 */
 body {
-  background-color: #262a33;  /* 부드러운 남청 배경 */
-  font-family: 'Roboto', sans-serif; /* Body 부분 모든 폰트 */
-  color: #FFFFFF; /* Body 부분 모든 폰트 */
+  background-color: #262a33;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
 }
 
+/* 헤더 스타일 */
 #topheader {
-  background-color: #FFFFFF;
-  padding:20px;
-  
+  background-color: #262a33;
+  display: flex;                  /* 로고와 메뉴를 가로로 배치 */
+  justify-content: space-between; /* 로고 좌측, 메뉴 우측 정렬 */
+  align-items: center;            /* 수직 중앙 정렬 */
+  padding: 10px 20px;             /* 좌우 여백 추가 */
+  border-bottom: 1px solid #444;  /* 하단 구분선 */
+}
+
+/* 로고 스타일 */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-decoration: none;          /* 밑줄 제거 */
+  transition: color 0.3s ease;    /* 호버 효과 */
+}
+
+.logo:hover {
+  color: #4ecdc4;                 /* 로고 호버 시 색상 변경 */
+}
+
+/* 네비게이션 메뉴 스타일 */
+#topheader ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;                  /* 메뉴를 가로로 나열 */
+  gap: 20px;                      /* 메뉴 간격 */
+}
+
+#topheader li {
+  display: inline;
+  padding: 0;
+}
+
+/* 메뉴 링크 스타일 */
+#topheader a {
+  color: #FFFFFF;
+  text-decoration: none;          /* 밑줄 제거 */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* 메뉴 호버 효과 */
+#topheader a:hover {
+  color: #4ecdc4;                 /* 메뉴 호버 시 색상 변경 */
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  #topheader {
+    flex-direction: column;       /* 작은 화면에서는 세로 배치 */
+    align-items: center;
+  }
+
+  #topheader ul {
+    flex-direction: column;       /* 메뉴도 세로로 나열 */
+    gap: 10px;
+  }
 }
