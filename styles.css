@@ -1,96 +1,149 @@
 /* 기본 스타일 */
 body {
-  background-color: #262a33;
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-}
-
-/* 헤더 스타일 */
-#topheader {
-  background-color: #262a33;
-  display: flex;
-  justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #444;
-}
-
-/* 로고 스타일 */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.logo:hover {
-  color: #4ecdc4;
-}
-
-/* 네비게이션 메뉴 */
-#nav-menu ul {
-  list-style: none;
-  display: flex;               /* 가로로 나열 */
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-#nav-menu li {
-  display: inline;
-}
-
-#nav-menu a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-#nav-menu a:hover {
-  color: #4ecdc4;
-}
-
-/* 햄버거 아이콘 */
-.menu-toggle {
-  display: none;               /* 기본적으로 숨김 */
-  font-size: 28px;
-  cursor: pointer;
-  color: #FFFFFF;
-}
-
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;            /* 작은 화면에서는 햄버거 메뉴 표시 */
-  }
-
-  #nav-menu {
-    display: none;             /* 초기에는 메뉴 숨김 */
-    flex-direction: column;
     background-color: #262a33;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border: 1px solid #444;
-    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 헤더 스타일 */
+  #topheader {
+    background-color: #262a33;
+    display: flex;
+    justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
+    align-items: center;
+    padding: 0px 30px;
+    border-bottom: 1px solid #e3e3e3 /* 기존 #444 에서 수정 */ ;
+  }
+  .sideframe{
+    background-color: #262a33;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right : 0px;
+    border-right: 1px solid #e3e3e3 /* 기존 #444 에서 수정 */ ;
+    float : left;
+    width: 300px;
+    clear: left;
+    height: 800px;
   }
 
-  #nav-menu.active {
-    display: flex;             /* 햄버거 클릭 시 메뉴 표시 */
+  .keesphoto{
+    border-radius: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right : 50px;
+    float : left;
+    clear: left;
+    width: 200px;
+    clear: left;
   }
 
+
+  .sideframe-content{
+    font-size: 80%;
+    background-color: #262a33;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin-right : 25px;
+    float : left;
+    clear: left;
+    width: 250px;
+  }
+  .recentpost {
+    background-color: #262a33;
+    line-height: 2;
+    margin-left: 335px;
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .about {
+    background-color: #262a33;
+    line-height: 2;
+    margin-left: 335px;
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  /* 로고 스타일 */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .logo:hover {
+    color: #4ecdc4;
+  }
+  
+  /* 네비게이션 메뉴 */
   #nav-menu ul {
-    flex-direction: column;    /* 세로로 정렬 */
-    gap: 10px;
+    list-style: none;
+    display: flex;               /* 가로로 나열 */
+    gap: 20px;
+    padding: 0px;
+    margin: 0;
   }
-
+  
+  #nav-menu li {
+    display: inline;
+    padding: 15px;
+  }
+  
   #nav-menu a {
-    padding: 10px;
-    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
   }
-}
+  
+  #nav-menu a:hover {
+    color: #4ecdc4;
+  }
+  
+  /* 햄버거 아이콘 */
+  .menu-toggle {
+    display: none;               /* 기본적으로 숨김 */
+    font-size: 28px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+  
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;            /* 작은 화면에서는 햄버거 메뉴 표시 */
+    }
+  
+    #nav-menu {
+      display: none;             /* 초기에는 메뉴 숨김 */
+      flex-direction: column;
+      background-color: #262a33;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+  
+    #nav-menu.active {
+      display: flex;             /* 햄버거 클릭 시 메뉴 표시 */
+    }
+  
+    #nav-menu ul {
+      flex-direction: column;    /* 세로로 정렬 */
+      gap: 10px;
+      padding : 0;
+    }
+  
+    #nav-menu a {
+      padding: 10px;
+      text-align: center;
+    }
+  }
