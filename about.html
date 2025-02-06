@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kee's LifeLab</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
 
+  <header>
+    <div id="topheader">
+      <!-- 로고 -->
+      <h1><a href="index1.html" class="logo">Kee's LifeLab</a></h1>
+
+      <!-- 햄버거 아이콘 -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <!-- 네비게이션 메뉴 -->
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Archive</a></li>
+          <li><a href="contact.html">By Category</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 좌측사이드바 -->
+  <div class="sideframe">
+    <img class="keesphoto" src="/IMG_8896.jpg">  
+  <div class="sideframe-content">
+    <h2 style="text-align: center;">Kee</h2>
+    <p>Introduction : Stories, ideas, and experiences worth sharing.</p>
+</div>
+
+ </div>
+
+
+<!-- 메인 컨텐츠 -->
+  
+  <div class="about">
+    <h2>About</h2>
+
+    <p>Hi, I’m Kee.</p>
+
+        <p>Living in the 21st century, where the internet allows us to connect with people across the world instantly, is truly fascinating.</p> 
+        <p>I’ve always wanted to create a space filled with my thoughts and share it with others. That’s why I first started a personal blog using WordPress in 2023. However, due to hosting and domain costs, I decided to restart my blog on GitHub, which provides free hosting.</p>
+        
+        <p>A little bit about me—I was born and raised in Korea, spent some time studying in the U.S. during high school, and later lived and worked in Canada on a working holiday visa. My experiences in North America have left me with great memories, and I want to raise my children here. As of 2025, I have obtained Canadian permanent residency and currently live in Canada.</p>
+        
+        <p>Whenever I have time, I plan to share bits and pieces of my life on this blog. My childhood was relatively smooth and comfortable, but things changed drastically during my university years when my family faced serious financial difficulties. Caught in that situation, I struggled to stay on track and made some unwise decisions, leading to one of the toughest periods of my life. Through this blog, I don’t just want to reflect on the past—I also want to share my present and my hopes for the future.</p>
+        
+        <p>I don’t believe my experiences or the lessons I’ve learned are absolute truths. Even if someone else were to face the same challenges and respond in the same way, the outcome wouldn’t necessarily be the same. However, if my stories can help someone, even in the smallest way, or simply bring a bit of enjoyment, that would mean a lot to me.</p>
+        
+        <p>So, feel free to stop by often!</p>
+</div>
+
+<script>
+  // 햄버거 메뉴 토글 스크립트
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
